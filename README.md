@@ -1,23 +1,65 @@
 # Handwritten Digit Recognition Neural Network
-This project is a neural network built with TensorFlow and Keras to recognize handwritten digits from the MNIST dataset.
+A simple Neural Network that uses TensorFlow and Keras that recognizes handwritten digits form the MNIST dataset
+
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+[![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras&logoColor=white)](https://keras.io/)
+
+
+---
 
 ## Features
-- Loads and preprocesses the MNIST dataset
-- Builds a neural network with 1 input layer, 2 hidden layers, 1 output player
-- Trains the model and evaluates its accuracy
-- Visualizes predictions and class probabilities
+- Loads & processes the MNIST dataset
+- Builds a fully connected feedforward NN with:
+  - 784 input neurons (28x28 image flattened)
+  - 128 hidden neurons
+  - 64 hidden neurons
+  - 10 output neurons
+- Trains with Adam optimizer & backpropagation
+- Visualizes preidctions
 
-  ## How to Run
-  1. Clone this repository.
-  2. Create Python Environment
-  3. Install Dependencies:
-     
-     `pip3 install jupyter tensorflow numpy matplotlib`
-  5. Access Jupyter Notebook using:
-     
-     `jupyter notebook`
-  6. Run cells to train and test the model
+---
 
-  ## Notes
-  - This project is based on a tutorial and was created to practice/understand neural networks using specific libraries.
-  - Source Tutorial:** [https://www.youtube.com/watch?v=VPlFpvLOgtQ]
+## Quick Start
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/handwritten-digit-nn.git
+cd handwritten-digit-nn
+
+# Create/Activate VE
+python -m venv .venv
+.venv\Scripts\activate
+
+# Install dependencies
+pip install -U tensorflow numpy matplotlib jupyter
+
+# Launch Jupyter Notebook
+jupyter notebook
+
+```
+
+---
+
+## Dataset
+- MNIST dataset (60,000 training images + 10,000 testing images)
+- 28x28 grayscale
+
+---
+
+## Training Results
+```matlab
+Epoch 1 -> 99.36%
+Epoch 2 -> 99.58%
+Epoch 3 -> 99.63%
+Epoch 4 -> 99.53%
+Epoch 5 -> 99.69%
+```
+## Test Accuracy
+✅ 97.91% Accuracy on 10,000 images
+
+---
+
+
+## Credit
+This project was inspired by the following tutorial:
+
+[![YouTube Video](https://img.youtube.com/vi/VPlFpvLOgtQ/0.jpg)](https://www.youtube.com/watch?v=VPlFpvLOgtQ)
